@@ -1,6 +1,6 @@
 %define	module	Net-Server
 %define	name	perl-%{module}
-%define	version	0.96
+%define	version	0.97
 %define	release	%mkrel 1
 
 %define	_provides_exceptions perl(My\\|perl(Sample
