@@ -21,6 +21,7 @@ BuildRequires:	perl(POSIX)
 BuildRequires:	perl(Socket)
 Requires:	perl-IO-Multiplex
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Net::Server is an extensible, generic Perl server engine.  Net::Server combines
