@@ -1,7 +1,7 @@
 %define	module	Net-Server
 %define	name	perl-%{module}
 %define	version	0.97
-%define	release	%mkrel 3
+%define	release	%mkrel 4
 
 %define	_provides_exceptions perl(My\\|perl(Sample
 
@@ -13,9 +13,6 @@ License:	GPL or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}
 Source:		http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.bz2
-%if %{mdkversion} < 1010
-Buildrequires:	perl-devel
-%endif
 BuildRequires:	perl(IO::Socket)
 BuildRequires:	perl(POSIX)
 BuildRequires:	perl(Socket)
