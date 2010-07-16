@@ -1,5 +1,5 @@
 %define	upstream_name	 Net-Server
-%define	upstream_version 0.97
+%define upstream_version 0.99
 
 %define	_provides_exceptions perl(My\\|perl(Sample
 
@@ -11,7 +11,7 @@ Summary:	Extensible, general Perl server engine
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(IO::Socket)
 BuildRequires:	perl(POSIX)
@@ -33,7 +33,7 @@ Net::FTPServer (1.0), and also from various concepts in the Apache Webserver.
 %make
 
 %check
-%{__make} test
+%make test
 
 %install
 rm -rf %{buildroot}
