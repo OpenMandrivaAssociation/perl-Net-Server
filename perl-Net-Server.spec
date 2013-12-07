@@ -10,7 +10,7 @@
 Summary:	Extensible, general Perl server engine
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	11
+Release:	12
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
