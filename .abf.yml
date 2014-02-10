@@ -1,2 +1,4 @@
+removed_sources:
+  Net-Server-0.99.tar.gz: f8794be07eb963c09ded3d19940471c99b8e7f71
 sources:
-  "Net-Server-0.99.tar.gz": f8794be07eb963c09ded3d19940471c99b8e7f71
+  Net-Server-2.007.tar.gz: e2cd92dc275371c50e3baca43f90e8bef1cdda7e

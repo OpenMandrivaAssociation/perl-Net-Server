@@ -1,5 +1,5 @@
 %define	modname	Net-Server
-%define modver	0.99
+%define modver 2.007
 
 %if %{_use_internal_dependency_generator}
 %define __noautoprov 'perl\\(My(.*)\\)|perl\\(Sample(.*)\\)'
@@ -10,11 +10,11 @@
 Summary:	Extensible, general Perl server engine
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	12
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Net/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Net/Net-Server-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(IO::Socket)
 BuildRequires:	perl(POSIX)
@@ -44,4 +44,5 @@ Net::FTPServer (1.0), and also from various concepts in the Apache Webserver.
 %doc Changes examples README
 %{perl_vendorlib}/Net
 %{_mandir}/man3/*
+
 
