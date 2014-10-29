@@ -45,4 +45,4 @@ Net::FTPServer (1.0), and also from various concepts in the Apache Webserver.
 %{perl_vendorlib}/Net
 %{_mandir}/man3/*
 %{_bindir}/net-server
-# %{_mandir}/man1/net-server.1
+%{_mandir}/man1/net-server.1*
