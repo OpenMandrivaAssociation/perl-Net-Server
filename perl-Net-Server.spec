@@ -28,21 +28,21 @@ the good properties from Net::Daemon (0.34), NetServer::Generic (1.03), and
 Net::FTPServer (1.0), and also from various concepts in the Apache Webserver.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{modver}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make
+perl Makefile.PL INSTALLDIRS=vendor
+%make_build
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes examples README
 %{perl_vendorlib}/Net
-%{_mandir}/man3/*
+%doc %{_mandir}/man3/*
 %{_bindir}/net-server
-%{_mandir}/man1/net-server.1*
+%doc %{_mandir}/man1/net-server.1*
