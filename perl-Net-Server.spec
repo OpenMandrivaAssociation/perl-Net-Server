@@ -1,11 +1,7 @@
 %define	modname	Net-Server
 %define modver 2.008
 
-%if %{_use_internal_dependency_generator}
-%define __noautoprov 'perl\\(My(.*)\\)|perl\\(Sample(.*)\\)'
-%else
-%define	_provides_exceptions perl(My\\|perl(Sample
-%endif
+%global __provides_exclude perl\\(My|perl\\(Sample
 
 Summary:	Extensible, general Perl server engine
 Name:		perl-%{modname}
@@ -19,7 +15,8 @@ BuildArch:	noarch
 BuildRequires:	perl(IO::Socket)
 BuildRequires:	perl(POSIX)
 BuildRequires:	perl(Socket)
-BuildRequires:	perl-devel
+BuildRequires:	perl(File::Temp)
+BuildRequires:	perl(ExtUtils::MakeMaker)
 Requires:	perl-IO-Multiplex
 
 %description
@@ -35,7 +32,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %make_build
 
 %check
-%make test
+make test
 
 %install
 %make_install
