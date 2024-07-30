@@ -1,16 +1,15 @@
 %define	modname	Net-Server
-%define modver 2.008
 
 %global __provides_exclude perl\\(My|perl\\(Sample
 
 Summary:	Extensible, general Perl server engine
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	6
+Version:	2.014
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Net/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Net/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(IO::Socket)
 BuildRequires:	perl(POSIX)
@@ -25,7 +24,7 @@ the good properties from Net::Daemon (0.34), NetServer::Generic (1.03), and
 Net::FTPServer (1.0), and also from various concepts in the Apache Webserver.
 
 %prep
-%autosetup -p1 -n %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
