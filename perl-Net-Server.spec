@@ -4,7 +4,7 @@
 
 Summary:	Extensible, general Perl server engine
 Name:		perl-%{modname}
-Version:	2.014
+Version:	2.018
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
@@ -25,7 +25,7 @@ the good properties from Net::Daemon (0.34), NetServer::Generic (1.03), and
 Net::FTPServer (1.0), and also from various concepts in the Apache Webserver.
 
 %prep
-%autosetup -p1 -n %{modname}-%{version}
+%autosetup -p1 -n Net-Server-2.018
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
